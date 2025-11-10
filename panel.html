@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Snippets</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root {
+      --bg: #0f1720;
+      --card: #0b1220;
+      --muted: #9aa6b2;
+      --accent: #0ea5e9;
+      --danger: #ef4444;
+      color-scheme: dark;
+    }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      margin: 12px;
+      background: var(--bg);
+      color: #e6eef6;
+      -webkit-font-smoothing:antialiased;
+    }
+    h2 { margin: 0 0 12px 0; font-size: 16px; }
+    .row { display:flex; gap:8px; align-items:center; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.03);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .snippet { padding:8px; border-radius:6px; background: rgba(255,255,255,0.02); margin-bottom:8px; }
+    pre { white-space: pre-wrap; overflow:auto; margin:6px 0; padding:8px; background:#071018; border-radius:6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:13px; }
+    input[type="text"], textarea {
+      width:100%;
+      background: transparent;
+      border:1px solid rgba(255,255,255,0.04);
+      padding:8px;
+      border-radius:6px;
+      color: inherit;
+    }
+    button {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.06);
+      color: #e6eef6;
+      padding:6px 8px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .muted { color: var(--muted); font-size:13px; }
+    .controls { display:flex; gap:6px; flex-wrap:wrap; }
+    .small { padding:4px 6px; font-size:12px; }
+    .danger { background:transparent; border:1px solid rgba(239,68,68,0.2); color:var(--danger); }
+  </style>
+</head>
+<body>
+  <h2>DevTools Snippets</h2>
+
+  <div class="card">
+    <div class="muted">Add snippet</div>
+    <div style="margin-top:8px;">
+      <input id="snippet-name" type="text" placeholder="Name (e.g. Highlight Links)" />
+    </div>
+    <div style="margin-top:8px;">
+      <textarea id="snippet-code" rows="6" placeholder="Code... (JS)"></textarea>
+    </div>
+    <div style="margin-top:8px;" class="row controls">
+      <button id="add" class="small">Add</button>
+      <button id="import" class="small">Import JSON</button>
+      <button id="export" class="small">Export JSON</button>
+      <button id="clear" class="small danger">Clear all</button>
+    </div>
+  </div>
+
+  <div id="list" class="card">
+    <div class="muted">Saved snippets</div>
+    <div id="snippets" style="margin-top:8px;"></div>
+  </div>
+
+  <script src="panel.js"></script>
+</body>
+</html>

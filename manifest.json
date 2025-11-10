@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "DevTools Snippets",
+  "version": "1.0",
+  "description": "Cole\u00e7\u00e3o de snippets acess\u00edveis diretamente no DevTools.",
+  "permissions": [
+    "storage"
+  ],
+  "devtools_page": "devtools.html",
+  "icons": {
+    "48": "icons/icon-48.png"
+  }
+}

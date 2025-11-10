@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Log selected element ($0)",
+    "code": "console.log($0);"
+  },
+  {
+    "name": "Highlight all links",
+    "code": "document.querySelectorAll('a').forEach(a => a.style.background='yellow');"
+  }
+]
