@@ -1,5 +1,13 @@
 # Browser-Devtools-Snippets
 
+### **version 2.0 of the extension**:
+> Added **automatic synchronization by default**, all integrated directly into `chrome.storage.sync`
+
+- ✅ instant search by name and code
+- ✅ syntax highlighting (Prism dark theme, light and fast)
+- ✅ automatic sync via `storage.sync`
+- ✅ keyboard shortcuts (`Ctrl+Enter`, `Ctrl+S`, `Ctrl+F`)
+- ✅ refined, responsive and fast look
 
 ### Quick instructions for testing:
 
